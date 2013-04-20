@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<extension
+	version="2.5"
+	type="template"
+	client="site">
+	<name>bsd4j2</name>
+	<creationDate>2013-04-16</creationDate>
+	<author>Lyon Sun</author>
+	<authorEmail>sunly917@gmail.com</authorEmail>
+	<authorUrl>gonewiththesun.wordpress.com</authorUrl>
+	<copyright>Copyright (C) 2013 Lyon. All rights reserved!</copyright>
+	<version>1.0</version>
+	<description>
+		<![CDATA[
+			<p>bsd4j2 is yet another bootstrap style template for joomla.</p>
+		]]>
+	</description>
+
+	<files>
+	    <filename>index.html</filename>
+		<filename>index.php</filename>
+		<filename>templateDetails.xml</filename>
+		<folder>html</folder>
+		<folder>css</folder>
+		<folder>js</folder>
+		<folder>img</folder>
+		<folder>language</folder>
+	</files>
+
+	<positions>
+		<position>position-0</position>
+		<position>position-1</position>
+		<position>position-2</position>
+		<position>position-3</position>
+		<position>position-4</position>
+		<position>position-5</position>
+		<position>position-6</position>
+		<position>position-7</position>
+		<position>position-8</position>
+		<position>position-9</position>
+		<position>position-10</position>
+		<position>position-11</position>
+		<position>position-12</position>
+		<position>position-13</position>
+		<position>position-14</position>
+	</positions>
+</extension>
