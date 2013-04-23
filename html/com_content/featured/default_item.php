@@ -150,7 +150,7 @@ $canEdit	= $this->item->params->get('access-edit');
 	endif;
 ?>
 			<p class="readmore">
-				<a href="<?php echo $link; ?>" class="btn btn-primary">
+				<a href="<?php echo $link; ?>" class="btn btn-primary btn-block">
 					<?php if (!$params->get('access-view')) :
 						echo JText::_('COM_CONTENT_REGISTER_TO_READ_MORE');
 					elseif ($readmore = $this->item->alternative_readmore) :

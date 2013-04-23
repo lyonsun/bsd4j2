@@ -16,10 +16,11 @@ $menu = $app->getMenu();
 $showbottom			= ($this->countModules('position-9') or $this->countModules('position-10') or $this->countModules('position-11'));
 ?>
 
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html dir="<?php echo $this->direction; ?>"
-	version="-//W3C//DTD HTML 4.01 Transitional//EN"
-	lang="<?php echo $this->language; ?>">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html 	xmlns="http://www.w3.org/1999/xhtml" 
+		xml:lang="<?php echo $this->language; ?>" 
+		lang="<?php echo $this->language; ?>" 
+		dir="<?php echo $this->direction; ?>" >
 <head>
 <jdoc:include type="head" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,35 +67,29 @@ $showbottom			= ($this->countModules('position-9') or $this->countModules('posit
 			<div class="carousel-inner">
 				<div class="item">
 					<img class="center"
-						src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/img/sample6.png"
+						src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/img/pic1.png"
 						alt="">
 					<div class="carousel-caption">
-						<h4>First Thumbnail label</h4>
-						<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-							Donec id elit non mi porta gravida at eget metus. Nullam id dolor
-							id nibh ultricies vehicula ut id elit.</p>
+						<h4>Kiinalainen Ravintola, Suuri Tang</h4>
+						<p>Olemme kiinalainen ravintola, tulla ja nauttia herkullisista kiinalaista ruokaa täällä Lahdessa.</p>
 					</div>
 				</div>
 				<div class="item">
 					<img class="center"
-						src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/img/sample7.png"
+						src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/img/pic2.png"
 						alt="">
 					<div class="carousel-caption">
-						<h4>Second Thumbnail label</h4>
-						<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-							Donec id elit non mi porta gravida at eget metus. Nullam id dolor
-							id nibh ultricies vehicula ut id elit.</p>
+						<h4>Tilaat, me palvelemme.</h4>
+						<p>Lounas, päivällinen astia tai mukaan, se on kaikki valintasi. voimme jopa toimittaa ruokaa suoraan kotiisi.</p>
 					</div>
 				</div>
 				<div class="item active">
 					<img class="center"
-						src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/img/sample8.png"
+						src="<?php echo $this->baseurl; ?>/templates/<?php echo $this->template;?>/img/pic3.png"
 						alt="">
 					<div class="carousel-caption">
-						<h4>Third Thumbnail label</h4>
-						<p>Cras justo odio, dapibus ac facilisis in, egestas eget quam.
-							Donec id elit non mi porta gravida at eget metus. Nullam id dolor
-							id nibh ultricies vehicula ut id elit.</p>
+						<h4>Kaunis paikka, herkullista ruokaa.</h4>
+						<p>Yhteyttä meidän yhteystiedot sivun alareunassa.</p>
 					</div>
 				</div>
 			</div>
@@ -122,20 +117,20 @@ $showbottom			= ($this->countModules('position-9') or $this->countModules('posit
 		<?php endif ?>
 		
 		<jdoc:include type="message" />
-
-		<div class="row-fluid">
-			<?php if($menu->getActive() != $menu->getDefault()): ?>
-			<div class="span3">
-				<jdoc:include type="modules" name="position-7" />
-				<jdoc:include type="modules" name="position-4" />
-				<jdoc:include type="modules" name="position-5" />
-			</div>
-			<div class="span9">
-				<?php if ($this->countModules('position-12')): ?>
+		<?php if ($this->countModules('position-12')): ?>
 				<div id="top">
 					<jdoc:include type="modules" name="position-12" />
 				</div>
 				<?php endif; ?>
+
+		<div class="row-fluid">
+			<?php if($menu->getActive() != $menu->getDefault()): ?>
+			<div class="span3">
+				<jdoc:include type="modules" name="position-4" />
+				<jdoc:include type="modules" name="position-5" />
+				<jdoc:include type="modules" name="position-7" />
+			</div>
+			<div class="span9">
 				<jdoc:include type="component" />
 			</div>
 			<?php else: ?>
@@ -169,8 +164,7 @@ $showbottom			= ($this->countModules('position-9') or $this->countModules('posit
 				<div id="footer">
 					<jdoc:include type="modules" name="position-14" />
 					<p>
-						<?php echo JText::_('TPL_BSD4J2_POWERED_BY');?>
-						<a href="http://www.joomla.org/">Joomla!&#174;</a>
+						Copyright 2012-2013 &#169; <a href="http://www.surritang.com">Suuri Tang</a>. Kaikki oikeudet pidätetään. 
 					</p>
 				</div>
 				<!-- end footer -->
@@ -179,6 +173,7 @@ $showbottom			= ($this->countModules('position-9') or $this->countModules('posit
 		<jdoc:include type="modules" name="debug" />
 	</div>
 
+	<div class="di"><small> Developer: <a href="http://www.twitter.com/sunly">@sunly</a>.</small></div>
 	<!-- back to the top link -->
 	<div id="toTop">
 		<a href="#main"><i class="icon-arrow-up"></i><br>YLÖS</a>
