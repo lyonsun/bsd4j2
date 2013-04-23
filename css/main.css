@@ -5,6 +5,10 @@ body {
 	/*color:#444;*/
 }
 
+p {
+	padding: 10px;
+}
+
 .navbar .brand {
 	text-shadow: 1px 1px 1px #fa0;
 	color: #fff;
@@ -32,6 +36,10 @@ body {
 	padding: 10px 0px;
 	/*font-family: 'Merienda', cursive;*/
 	/*font-size: 20px;*/
+}
+
+.navbar-inverse .nav-collapse .nav > li > a:hover, .navbar-inverse .nav-collapse .nav > li > a:focus, .navbar-inverse .nav-collapse .dropdown-menu a:hover, .navbar-inverse .nav-collapse .dropdown-menu a:focus {
+	background-color: #fff;
 }
 
 .navbar .nav>.active>a,.navbar .nav>.active>a:hover,.navbar .nav>.active>a:focus
@@ -76,7 +84,10 @@ body {
 
 @media ( min-width : 980px) {
 	.carousel-inner>.item {
-		height: 500px;
+		height: 400px;
+	}
+	.span9, .span12 {
+	padding: 0 20px;
 	}
 }
 
@@ -88,6 +99,9 @@ body {
 @media ( max-width : 979px) {
 	.carousel-caption {
 		opacity: 0.9;
+	}
+	span9, .span12 {
+	padding: 0;
 	}
 }
 
@@ -103,18 +117,18 @@ body {
 	top: 95%;
 }
 
-.carousel-inner img { /*     width: 100%; */
-	
+.carousel-inner img { 
+/*     width: 100%; */	
 }
 
 img.center {
 	display: block;
 	margin: auto;
-	opacity: 1;
+	opacity: 0.9;
 }
 
 img.center:hover {
-	opacity: 0.9;
+	opacity: 1;
 }
 
 form {
@@ -181,7 +195,7 @@ img.intro {
 }
 
 .row,.row-fluid { /*text-align: center;*/
-	margin: 20px 0;
+	margin: 10px 0;
 }
 
 .row .span4>p { /*color:#555;*/
@@ -199,7 +213,7 @@ img.intro {
 	margin-bottom: 15px;
 }
 
-.span3, .span9, .span12 {
+.span3 {
 	padding: 0 20px;
 	text-align: left;
 }
@@ -210,6 +224,12 @@ img.intro {
 
 .sidebar.affix { /*position: fixed;*/
 	
+}
+
+.info {
+    text-align: center;
+    padding: 10px;
+    box-shadow: 0px 1px 10px rgba(5, 0, 0, 1);
 }
 
 .nav-stacked>li>a {
@@ -235,21 +255,22 @@ img.intro {
 	padding-right: 0;
 }
 
-.item-page>h2 {
-	text-transform: uppercase;
+.span9 h2, .span12 h2 {
+/* 	text-transform: uppercase; */
 	/*font-family: Apple Chancery;*/
-	font-size: 40px;
-	font-weight: bold;
+/* 	font-size: 40px; */
+/* 	font-weight: bold; */
+    text-align: center;
 }
 
-.item-page {
-    padding: 8px;
+.span9>div, .span12 {
+    padding: 30px 5px;
     box-shadow: 0px 1px 10px rgba(5, 0, 0, 1);
     /*margin:5px;*/
 }
 
-.item-page .table-hover > thead > tr,
-.item-page .table-hover > tbody > tr {
+.span9 .table-hover > thead > tr,
+.span9 .table-hover > tbody > tr {
     line-height: 25px;
     padding: 8px;
     text-align: left;
@@ -257,45 +278,51 @@ img.intro {
     border-top: 1px solid #eee;
 }
 
-.item-page .table-hover {
+.span9 .table-hover {
     width: 100%;
 }
 
-.item-page .table-hover thead {
-    background: #751E14;
+.span9 .table-hover thead {
+    background: #860e00; /*#751E14;*/
     color: #fff;
     text-transform: uppercase;
 }
 
-.item-page h3 {
+.span9 h3 {
     text-align: center;
     text-transform: uppercase;
     text-shadow:4px 4px 4px #aaa;
     margin-bottom: 20px;
 }
 
-.item-page .table-hover th,
-.item-page .table-hover td {
+.span9 .table-hover th,
+.span9 .table-hover td {
     text-align: center;
     /*padding: 0 4px;*/
     width: 1%;
 }
 
-.item-page .subthead,
-.item-page .subthead:hover {
+.span9 .subthead,
+.span9 .subthead:hover {
     text-align: center;
     background: #922619;
     color: #fff;
     text-transform: uppercase;
 }
 
-.item-page .table-hover th,
-.item-page .table-hover td {
+.span9 .table-hover th,
+.span9 .table-hover td {
     width: auto;
+}
+
+#footer-outer {
+/* 	background: url('../img/PixieImage.png'); */
+box-shadow: 0px 1px 10px rgba(5, 0, 0, 1);
 }
 
 .footer-cols { /*padding: 10px;*/
 	text-align: center;
+/* 	box-shadow: 0px 1px 10px rgba(5, 0, 0, 1); */
 	/*     border-top: 1px solid #ddd; */
 	/*     background: #F4E9E8; */
 	/*color: #fff;*/
@@ -312,7 +339,7 @@ img.intro {
 }
 
 .footer-cols .social>div {
-	padding: 15px;
+	padding: 0 25px;
 }
 
 .footer-cols .social>div>.img-polaroid { /*background: #aaa;*/
@@ -323,6 +350,11 @@ img.intro {
 	min-height: 0px;
 }
 
+/*hr, */.footer-cols .row-fluid {
+	margin: 0;
+	padding: 0;	
+}
+
 .footer-cols .img-circle {
 	box-shadow: 1px 3px 3px rgba(1, 0, 0, 0.7);
 }
@@ -330,7 +362,8 @@ img.intro {
 #footer {
 	text-align: center;
 	/*font-size: 14px;*/
-	padding: 10px 20px;
-	border-top: 1px solid #fff;
+	padding: 5px 20px;
+	border-top: 1px solid #eee; 
+/* 	box-shadow: 0px 1px 10px rgba(5, 0, 0, 1); */
 	/*     background: #F4E9E8; */
 }

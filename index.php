@@ -43,7 +43,7 @@ $showbottom			= ($this->countModules('position-9') or $this->countModules('posit
 
 <body>
 	<!-- navigation bar -->
-	<div class="navbar navbar-fixed-top">
+	<div class="navbar navbar-fixed-top navbar-inverse">
 		<div class="navbar-inner">
 			<div class="container">
 				<a class="btn btn-navbar" data-toggle="collapse"
@@ -110,7 +110,7 @@ $showbottom			= ($this->countModules('position-9') or $this->countModules('posit
 		<div>
 			<img
 				src="<?php echo $this->baseurl ?>/templates/<?php echo $this->template ?>/img/intro.jpg"
-				alt="intro" class="intro">
+				alt="intro" class="intro center">
 		</div>
 
 		<?php if ($this->countModules('position-2')): ?>
@@ -120,6 +120,8 @@ $showbottom			= ($this->countModules('position-9') or $this->countModules('posit
 		<?php endif; ?>
 
 		<?php endif ?>
+		
+		<jdoc:include type="message" />
 
 		<div class="row-fluid">
 			<?php if($menu->getActive() != $menu->getDefault()): ?>
@@ -134,19 +136,17 @@ $showbottom			= ($this->countModules('position-9') or $this->countModules('posit
 					<jdoc:include type="modules" name="position-12" />
 				</div>
 				<?php endif; ?>
-				<jdoc:include type="message" />
 				<jdoc:include type="component" />
 			</div>
 			<?php else: ?>
 			<div class="span12">
-				<jdoc:include type="message" />
 				<jdoc:include type="component" />
 			</div>
 			<?php endif; ?>
 		</div>
 
 
-		<hr>
+<!-- 		<hr> -->
 
 		<div id="footer-outer">
 			<?php if ($showbottom) : ?>
@@ -163,6 +163,7 @@ $showbottom			= ($this->countModules('position-9') or $this->countModules('posit
 					</div>
 				</div>
 			</div>
+<!-- 			<hr> -->
 			<?php endif ; ?>
 			<div id="footer-sub">
 				<div id="footer">
